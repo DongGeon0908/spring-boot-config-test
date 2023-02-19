@@ -11,7 +11,14 @@ import org.springframework.context.annotation.Bean
 class SpringBootConfigurationApplication {
     private val logger = KotlinLogging.logger {}
 
-    /** condition matching이 완료된 것들에 대한 로깅 진행 */
+
+    /**
+     * condition matching이 완료된 것들에 대한 로깅 진행
+     *
+     * - spring default
+     * - spring web
+     * - spring data
+     */
     @Bean
     fun getConditionInfos(conditionEvaluationReport: ConditionEvaluationReport): ApplicationRunner {
         return ApplicationRunner {
